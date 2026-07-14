@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Terios Commute Tracker</title>
+
+<meta name="theme-color" content="#111111">
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🚗 TERIOS COMMUTE TRACKER</h1>
+
+<p>Daily Fuel & Commute Dashboard</p>
+
+</header>
+
+<div class="container">
+
+<!-- MID -->
+
+<section class="card">
+
+<h2>Dashboard MID</h2>
+
+<div id="fuelBar">
+
+<div class="bar active"></div>
+<div class="bar active"></div>
+<div class="bar active"></div>
+<div class="bar active"></div>
+<div class="bar active"></div>
+<div class="bar active"></div>
+<div class="bar active"></div>
+<div class="bar active"></div>
+
+</div>
+
+<p>Sisa BBM</p>
+
+<h3 id="literLeft">45.00 Liter</h3>
+
+<p id="fuelPercent">100%</p>
+
+<p id="distanceLeft">Estimasi 450 km</p>
+
+</section>
+
+<!-- Fuel Calculator -->
+
+<section class="card">
+
+<h2>Fuel Calculator</h2>
+
+<label>Harga Pertamax</label>
+
+<input
+type="number"
+id="fuelPrice"
+value="16250">
+
+<label>Konsumsi (km/L)</label>
+
+<input
+type="number"
+id="kmPerLiter"
+value="10">
+
+<label>Jarak Harian (km)</label>
+
+<input
+type="number"
+id="dailyDistance"
+value="37">
+
+<button onclick="calculateFuel()">
+
+Hitung
+
+</button>
+
+</section>
+
+<!-- Result -->
+
+<section class="card">
+
+<h2>Biaya</h2>
+
+<div class="result">
+
+<p>Per Hari</p>
+
+<h3 id="dailyCost">
+
+Rp0
+
+</h3>
+
+</div>
+
+<div class="result">
+
+<p>Per Minggu</p>
+
+<h3 id="weeklyCost">
+
+Rp0
+
+</h3>
+
+</div>
+
+<div class="result">
+
+<p>Per Bulan</p>
+
+<h3 id="monthlyCost">
+
+Rp0
+
+</h3>
+
+</div>
+
+<div class="result">
+
+<p>Per Tahun</p>
+
+<h3 id="yearlyCost">
+
+Rp0
+
+</h3>
+
+</div>
+
+</section>
+
+<!-- Trip Planner -->
+
+<section class="card">
+
+<h2>Trip Planner</h2>
+
+<select id="shift">
+
+<option value="morning">
+
+Shift Pagi
+
+</option>
+
+<option value="afternoon">
+
+Shift Siang
+
+</option>
+
+<option value="night">
+
+Shift Malam
+
+</option>
+
+</select>
+
+<button onclick="showSchedule()">
+
+Lihat Jadwal
+
+</button>
+
+<div id="schedule">
+
+</div>
+
+</section>
+
+<!-- Statistic -->
+
+<section class="card">
+
+<h2>Statistik</h2>
+
+<p>Total KM Bulan Ini</p>
+
+<h3 id="monthKM">
+
+925 KM
+
+</h3>
+
+<p>Estimasi Isi Ulang</p>
+
+<h3 id="refuelDay">
+
+12 Hari
+
+</h3>
+
+</section>
+
+</div>
+
+<footer>
+
+Terios Commute Tracker v0.1
+
+</footer>
+
+<script src="app.js"></script>
+
+<script>
+
+if ('serviceWorker' in navigator) {
+
+navigator.serviceWorker.register('sw.js');
+
+}
+
+</script>
+
+</body>
+
+</html>
