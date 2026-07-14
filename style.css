@@ -350,3 +350,19 @@ max-width:900px;
 }
 
 }
+
+.bar.warning{
+
+    background:#f1c40f;
+
+    box-shadow:0 0 8px #f1c40f;
+
+}
+
+.bar.danger{
+
+    background:#e74c3c;
+
+    box-shadow:0 0 8px #e74c3c;
+
+}
