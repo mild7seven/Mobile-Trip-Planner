@@ -1,0 +1,352 @@
+/* ==========================================
+   TERIOS COMMUTE TRACKER v0.1
+   Sprint 1 - Part 2
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --bg:#0d1117;
+
+    --card:#161b22;
+
+    --green:#2ecc71;
+
+    --yellow:#f1c40f;
+
+    --red:#e74c3c;
+
+    --text:#ffffff;
+
+    --gray:#8b949e;
+
+    --radius:18px;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    padding:15px;
+
+}
+
+header{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+header h1{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+header p{
+
+    color:var(--gray);
+
+    margin-top:5px;
+
+}
+
+.container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.card{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    padding:18px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.35);
+
+}
+
+.card h2{
+
+    margin-bottom:15px;
+
+    font-size:20px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-top:12px;
+
+    margin-bottom:6px;
+
+    color:var(--gray);
+
+}
+
+input,select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#21262d;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+button{
+
+    width:100%;
+
+    margin-top:18px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--green);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+button:hover{
+
+    opacity:.9;
+
+}
+
+.result{
+
+    margin-top:14px;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    background:#21262d;
+
+}
+
+.result h3{
+
+    margin-top:6px;
+
+    color:var(--green);
+
+}
+
+footer{
+
+    text-align:center;
+
+    margin:30px 0;
+
+    color:var(--gray);
+
+}
+
+/* MID Fuel Bar */
+
+#fuelBar{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:6px;
+
+    margin:20px 0;
+
+}
+
+.bar{
+
+    width:32px;
+
+    height:16px;
+
+    border-radius:4px;
+
+    background:#444;
+
+    transition:.4s;
+
+}
+
+.bar.active{
+
+    background:var(--green);
+
+    box-shadow:0 0 8px var(--green);
+
+}
+
+#literLeft{
+
+    text-align:center;
+
+    font-size:34px;
+
+    margin-top:10px;
+
+}
+
+#fuelPercent{
+
+    text-align:center;
+
+    color:var(--yellow);
+
+    margin-top:5px;
+
+    font-size:20px;
+
+}
+
+#distanceLeft{
+
+    text-align:center;
+
+    margin-top:8px;
+
+    color:var(--gray);
+
+}
+
+/* Trip Planner */
+
+#schedule{
+
+    margin-top:18px;
+
+    background:#21262d;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    line-height:1.8;
+
+}
+
+/* Statistic */
+
+#monthKM,
+
+#refuelDay{
+
+    margin-top:8px;
+
+    color:var(--green);
+
+    font-size:28px;
+
+    text-align:center;
+
+}
+
+/* Mobile */
+
+@media(max-width:480px){
+
+header h1{
+
+font-size:22px;
+
+}
+
+.card{
+
+padding:15px;
+
+}
+
+.bar{
+
+width:22px;
+
+height:14px;
+
+}
+
+#literLeft{
+
+font-size:28px;
+
+}
+
+}
+
+/* Tablet */
+
+@media(min-width:768px){
+
+.container{
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+}
+
+/* Desktop */
+
+@media(min-width:1200px){
+
+.container{
+
+max-width:900px;
+
+}
+
+}
